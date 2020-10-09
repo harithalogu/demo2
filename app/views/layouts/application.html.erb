@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby_App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="container" align = "center" >
+  <ul class="nav nav-tabs" style=" border-bottom: 2px solid #2d2626;
+    text-size-adjust: 19px;
+    font-size: 16px;
+    padding: 14px;">
+  <br>
+  <li><%= link_to "Create Employee", {controller: "employees", action: "new"} ,class: 'btn btn-primary' %></li>
+  <li><%= link_to "View Employee Details", {controller: "employees", action: "index"} ,class: 'btn btn-primary' %></li>
+  </ul>
+
+
+    <%= yield %>
+	</div>
+  </body>
+</html>
